@@ -1,0 +1,25 @@
+Web development Procedure
+
+
+1. Project Plan determine(Hotel show)
+
+
+2.Uer Experience(User Story)
+
+
+3.Decide features distribution for web(components)  -- develpoer & UI
+
+
+4.Tasks assignment
+
+
+5.Version Control (fornt-end, back-end, github, Database, Jira...: frame/language/Tool  version!!!!)
+
+
+6.Create Project(Project, github master/branch....)
+
+
+7.database create and design(ignore)
+
+
+8.Intial Project()
