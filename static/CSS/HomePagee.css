@@ -1,0 +1,300 @@
+.header {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  position: fixed; /*  absolute?  */
+  top: 0;
+  left: 0;
+  right: 0;
+  border-width: 1px;
+  border-color: grey;
+  z-index: 90;
+}
+
+.header-left-section {
+  display: flex;
+  align-items: center;
+}
+
+.phone-icon {
+  height: 15px;
+  padding-left: 80px;
+  padding-right: 12px;
+}
+
+.phone-number {
+  font-size: 11px;
+  font-family: Arial;
+  padding-right: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.email-icon {
+  height: 18px;
+  padding-right: 10px;
+}
+
+.email-address {
+  font-size: 10px;
+  font-family: Arial;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.phone-number:hover,
+.email-address:hover {
+  text-decoration: underline;
+}
+
+.header-right-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 80px;
+  height: 40px;
+}
+
+.facebook-icon {
+  height: 16px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.instagram-icon {
+  height: 16px;
+  cursor: pointer;
+  padding-right: 20px;
+}
+
+.book-now-button {
+  font-size: 14px;
+  color: white;
+  background-color: #c49c48;
+  padding: 10px 30px 9px 30px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.book-now-button:hover {
+  text-decoration: underline;
+}
+
+.navigation {
+  display: flex;
+  height: 30px;
+  background-color: black;
+  margin-top: 40px;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0.6;
+  position: fixed;
+  top: 0px;
+  right: 0;
+  left: 0;
+  z-index: 80;
+}
+
+.nav-left-section {
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 320px;
+  align-items: center;
+}
+
+.accommodation,
+.about,
+.gallery,
+.dining,
+.contact {
+  font-family: Arial;
+  font-size: 12px;
+  padding-right: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-right-section {
+  display: flex;
+  justify-content: space-evenly;
+  padding-right: 310px;
+  align-items: center;
+}
+
+.christchurch-city-hotel-container {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 550px;
+  border-color: grey;
+  border-width: 1px;
+  border-style: solid;
+  cursor: pointer;
+}
+
+.christchurch-city-hotel-logo {
+  width: 200px;
+  padding-top: 12px;
+  background-color: white;
+}
+
+.hotel-picture {
+  width: 100%;
+}
+
+h2 {
+  font-weight: 500;
+  font-family: Arial;
+  margin-left: 50px;
+  margin-top: 80px;
+}
+
+.open-date {
+  font-style: italic;
+  margin-left: 50px;
+}
+
+p {
+  margin-left: 50px;
+  margin-right: 50px;
+  font-size: 20;
+}
+
+.hotel-facility {
+  margin-left: 500px;
+}
+
+.facility-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 20px;
+  margin-left: 100px;
+  margin-top: 50px;
+}
+
+.facility-container {
+  display: flex;
+  align-items: center;
+}
+
+.facility-text {
+  font-family: Arial;
+  font-weight: 600;
+  padding-left: 20px;
+  font-size: medium;
+}
+
+.map-container {
+  position: relative;
+  background-color: lightblue;
+  margin-top: 110px;
+}
+
+.map {
+  width: 100%;
+  height: 600px;
+  z-index: 40;
+}
+
+.contact-form {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  top: 0;
+  height: 100%;
+  width: 550px;
+  z-index: 50;
+}
+
+.white-phone-container,
+.white-mail-container {
+  padding-left: 50px;
+  padding-top: 10px;
+}
+
+.white-phone-icon,
+.white-mail-icon,
+.white-marker-icon {
+  height: 16px;
+  padding-right: 10px;
+}
+
+.address-container {
+  display: flex;
+  padding-left: 50px;
+  padding-top: 17px;
+}
+
+.white-marker-icon {
+  padding-right: 14px;
+}
+
+.contact-form-text {
+  text-decoration: none;
+  color: white;
+  font-size: 13px;
+}
+
+.contact-form-text:hover {
+  text-decoration: underline;
+}
+
+.name-email-container {
+  padding-left: 50px;
+  padding-top: 30px;
+}
+
+.name-bar,
+.email-bar {
+  height: 40px;
+  background-color: white;
+  opacity: 1;
+  border-style: none;
+  border-radius: 2px;
+  width: 183px;
+  padding-left: 20px;
+}
+
+.name-bar::placeholder,
+.email-bar::placeholder {
+  font-size: 15px;
+}
+
+.field-text {
+  padding-left: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.message-bar {
+  margin-top: 10px;
+  height: 150px;
+  width: 370px;
+  border-style: none;
+  border-radius: 2px;
+  padding: 10px 20px;
+}
+
+.message-bar::placeholder {
+  font-size: 15px;
+}
+
+.send-message {
+  padding: 10px 130px 10px 130px;
+  background-color: #c49c48;
+  border-style: none;
+  border-radius: 2px;
+  color: white;
+  margin-top: 40px;
+}
+
+.send-message:hover {
+  color: black;
+  background-color: lightgray;
+}

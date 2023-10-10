@@ -1,0 +1,201 @@
+main {
+  box-sizing: border-box;
+}
+body {
+  padding-bottom: 1000px;
+}
+
+.header {
+  background-color: rgb(7, 125, 171);
+  height: 56px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.header-logo-menu-section {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: space-between;
+  padding-left: 70px;
+}
+
+.header-currency-language-section {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.header-text {
+  color: white;
+  font-size: 18px;
+  font-weight: 300;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.english-text {
+  margin-left: 10px;
+  margin-right: 90px;
+  border-left-color: white;
+  border-left-width: 1px;
+  border-left-style: solid;
+  padding-left: 10px;
+}
+
+.showcase-picture {
+  width: 100%;
+  height: 400px;
+}
+
+.showcase-picture-desktop-container {
+  position: relative;
+}
+
+.date-room-promo-section {
+  border-color: rgb(6, 105, 146);
+  height: 80px;
+  width: 1128px;
+  position: absolute;
+  background-color: white;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 8px;
+  z-index: 900;
+  bottom: -50px;
+  left: 120px;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+main {
+  border: green 2px solid;
+  display: flex;
+  flex-direction: row;
+  height: 1000px;
+}
+
+.booking-container {
+  margin-left: 120px;
+  margin-top: 80px;
+  border: rgb(7, 125, 171) 2px solid;
+  width: 750px;
+  border-radius: 5px;
+}
+
+.room-information-container {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid;
+  border-bottom-color: hsl(0, 12%, 92%);
+  padding-bottom: 15px;
+}
+
+.room-type-brife {
+  margin-top: 10px;
+  margin-left: 8px;
+}
+
+.room-type-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.room-type-description {
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.room-rate-container {
+  padding-left: 15px;
+  padding-top: 12px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid;
+  border-bottom-color: hsl(0, 12%, 92%);
+}
+
+.room-rate-container span {
+  font-size: 14px;
+  font-family: Lato, Helvetica, Arial, sans-serif;
+  color: rgb(51, 51, 51);
+}
+
+.room-rate-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.room-rate-main-left {
+  display: block;
+}
+
+h5 {
+  font-family: Lato, Helvetica, Arial, sans-serif;
+  font-size: 400;
+}
+
+#moreInfo {
+  color: rgb(6, 106, 146);
+  padding-top: 15px;
+}
+
+.room-rate-main-right {
+  display: flex;
+
+  width: 250px;
+  justify-content: space-between;
+  margin-right: 20px;
+  position: relative;
+}
+
+.price-information-container {
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+  justify-content: end;
+}
+
+.price-now {
+  font-weight: bold;
+  font-size: 17px;
+  font-family: Lato, Helvetica, Arial, sans-serif;
+}
+
+.cost-for {
+  font-size: 12px;
+  font-family: Lato, Helvetica, Arial, sans-serif;
+  color: rgb(113, 113, 113);
+}
+
+.select-button-container {
+  display: flex;
+  align-items: end;
+}
+
+.select-button {
+  width: 101px;
+  height: 40px;
+  border: none;
+  background-color: rgb(6, 106, 146);
+  color: white;
+  border-radius: 3px;
+  font-family: Lato, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+}
+
+.booking-summary-container {
+  border: yellow 2px solid;
+  width: 355px;
+  height: 224px;
+  margin-top: 80px;
+  margin-left: 20px;
+  border-radius: 5px;
+}

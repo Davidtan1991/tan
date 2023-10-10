@@ -7,21 +7,152 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
     />
-    <title></title>
+    <title>Home Page</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
       crossorigin="anonymous"
     />
+
+
+    <!-- two link methods below:  -->
     <link
       rel="stylesheet"
       href="{{url_for('static', filename = './css/home.css')}}"
     />
+    <link rel="stylesheet" href="/static/CSS/HomePagee.css" />
   </head>
 
   <body>
-    <p>Hello Fresh</p>
-    <a href="/booking_page">booking page</a>
+    <header class="header">
+      <div class="header-left-section">
+        <img class="phone-icon" src="/static/img/homePagePicture/phone.svg" alt="phone" />
+        <a href="tel:03 9307630" class="phone-number">03 9307630</a>    <!--space??-->
+        <img class="email-icon" src="/static/img/homePagePicture/email.svg" alt="email" />
+        <a href="mailto:reservation@christchurchcityhotel.co.nz" class="email-address">EMAIL US</a>
+      </div>
+
+      <div class="header-right-section">
+        <img
+          class="facebook-icon"
+          src="/static/img/homePagePicture/facebook.svg"
+          alt="facebook"
+        />
+        <img
+          class="instagram-icon"
+          src="/static/img/homePagePicture/instagram.svg"
+          alt="instagram"
+        />
+        <a class="book-now-button" href="bookingPage.html" target="_blank">Book Now</a>
+      </div>
+    </header>
+
+    <nav class="navigation">
+      <div class="nav-left-section">
+        <div class="accommodation">ACCOMMODATION</div>
+        <div class="about">ABOUT</div>
+      </div>
+
+      <div class="nav-right-section">
+        <div class="gallery">GALLERY</div>
+        <div class="dining">DINING</div>
+        <div class="contact">CONTACT</div>
+      </div>
+    </nav>
+
+    <div class="christchurch-city-hotel-container">
+      <!-- href to backend router (or use ajax)-->
+      <a href="http://127.0.0.1:5500/templates/home.html">   
+        <img
+        class="christchurch-city-hotel-logo"
+        src="/static/img/homePagePicture/Christchurch-City-Hotel-Logo.png"
+        alt="christchurch-city-hotel-logo"
+        /></a>
+    </div>
+
+    <div>
+      <img
+        class="hotel-picture"
+        src="/static/img/homePagePicture/pexels-pixabay-258154.jpeg"
+        alt="hotel-picture"
+      />
+    </div>
+
+    <h2>WELCOME TO CHRISTCHURCH CITY HOTEL</h2>
+    <p class="open-date">OPENED JULY 2021</p>
+    <p>Located in the heart of the revitalised and vibrant city centre, Christchurch City Hotel offers stylish accommodation, friendly service, and stunning city views. Architecturally designed and built to the highest safety standards with both quality and comfort in mind.</p>
+
+    <p>Spend your visit with us exploring Christchurch while enjoying the convenience of the very best in location, location, location. From your central base you will be within easy walking distance of the cities attractions, or wanting something a little different, let our team arrange an e-scooter or electric bike. If you are venturing further afield, we have valet parking available. If you are staying for business, simply stroll out the front door with your espresso in hand before heading to your next meeting, conference or function. It couldn&#39t be easier.</P>
+      
+    <P>As Christchurch&#39s newest hotel we offer 46 rooms ranging from our Executive Studio to Executive Suites featuring contemporary furnishings, modern stylish colour schemes, air conditioning, work desks, WiFi, tea and coffee making facilities and smart televisions with streaming services. Our skyline rooftop bar features local artisan produce and Canterbury wines is due to open for your gastronomic enjoyment in Summer 2023.</p>
+      
+    <P>We look forward to welcoming you to Christchurch City Hotel where our friendly team will ensure your stay is relaxed and will have you already looking forward to your next visit back to Christchurch.</p>
+      
+    <p>Christchurch City Hotel is a must for your next visit. Our friendly team look forward to welcoming you to stay with us in the heart of Christchurch.</p>
+
+    <div><img src="/static/img/homePagePicture/pool-side.avif" alt="pool-side"></div>
+    
+    <h2 class="hotel-facility">HOTEL FACILITY</h2>
+
+    <div class="facility-grid">
+      <div class="facility-container">
+        <img src="/static/img/homePagePicture/luggage.svg" alt="luggage">
+        <div class="facility-text">LUGGAGE STORAGE</div>
+      </div>
+      <div class="facility-container">
+        <img src="/static/img/homePagePicture/wifi.svg" alt="wifi">
+        <div class="facility-text">HIGH SPEED WIFI</div>
+      </div>
+      <div class="facility-container">
+        <img src="/static/img/homePagePicture/restaurant.svg" alt="restaurant">
+        <div class="facility-text">RESTAURANT</div>
+      </div>
+      <div class="facility-container">
+        <img src="/static/img/homePagePicture/activities.svg" alt="activities">
+        <div class="facility-text">ACTIVITY BOOKINGS</div>
+      </div>
+    </div>
+
+    <div class="map-container">
+      <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2892.5591978217108!2d172.63388341143505!3d-43.53238407098755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d318a3d20c6ab11%3A0x696fbae131b1fd44!2sChristchurch%20City%20Hotel!5e0!3m2!1sen!2snz!4v1693978003971!5m2!1sen!2snz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <form class="contact-form">
+        <h2>CONTACT US</h2>
+        <div class="white-phone-container">
+          <img class="white-phone-icon" src="/static/img/homePagePicture/white-phone.svg" alt="white-phone">
+          <a class="contact-form-text" href="tel:03 9307603">03 9307630</a>
+        </div>
+        <div class="white-mail-container">
+          <img class="white-mail-icon" src="/static/img/homePagePicture/white-email.svg" alt="white-email">
+          <a class="contact-form-text" href="mailto:reservation@christchurchcityhotel.co.nz">reservation@christchurchcityhotel.co.nz</a>
+        </div>
+        <div class="address-container">
+          <img class="white-marker-icon" src="/static/img/homePagePicture/white-marker.svg" alt="white-marker">
+          <a class="contact-form-text" href="https://www.google.com/maps/place/699+Colombo+Street,+Christchurch+Central+City,+Christchurch+8011/@-43.5323841,172.6338834,17z/data=!3m1!4b1!4m6!3m5!1s0x6d318a3d20c6ab11:0x331c39c64cff149d!8m2!3d-43.5323841!4d172.6364637!16s%2Fg%2F11h0_nlp_b?entry=ttu" target="_blank">699 Colombo Street, Christchurch Central, New Zealand</a>
+        </div>
+        <div class="name-email-container">
+          <input class="name-bar" type="text" placeholder="Name..." required>
+          <input class="email-bar" type="email" placeholder="Email..." required>
+        </div>  
+        <label class="field-text" for="text">This field is required</laber>
+        <textarea id="text" class="message-bar" type="text" placeholder="Message..." required maxlength="300"></textarea>
+        
+        <input type="submit" value="Send Message" class="send-message">
+        
+      </form>
+      
+    
+    
+    
+    </div>
+
+    
+
+
+
+
+
+
+
   </body>
 </html>
