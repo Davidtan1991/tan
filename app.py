@@ -1,7 +1,6 @@
 from flask import Flask
 from controller import homepage, bookingPage, feedBackPage
 
-
 app = Flask(__name__)
 
 
