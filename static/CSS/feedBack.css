@@ -1,1 +1,49 @@
 
+html {
+    height: 100%;
+    /* display: table; */
+    width: 100%;
+    z-index: 0;
+}
+  
+body {
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+}
+
+
+#titleArea_feedback{
+    height: 10%;
+    width: 100%;
+    position: relative;
+    float:left;
+    background-color: red;
+}
+
+
+#historyShowArea_feedback{
+    height: 60%;
+    width: 70%;
+    position: relative;
+    float:left;
+    background-color: blue;
+}
+
+
+#roomShowArea_feedback{
+    height: 60%;
+    width: 30%;
+    position: relative;
+    float:left;
+    background-color: yellow;
+}
+
+
+#editArea_feedback{
+    height: 30%;
+    width: 100%;
+    position: relative;
+    float:left;
+    background-color: green;
+}
