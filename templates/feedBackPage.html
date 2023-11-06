@@ -23,105 +23,17 @@
   <body>
     <div id = "titleArea_feedback">Feedback Area</div>
     <div id = "historyShowArea_feedback">
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
+        {%for key in initialFeedback%}
+            <table class = "fbUnit">
+              <tbody>
+                <tr><td class = "fdPhoto">{{key['photo']}}</td><td class = "fdDetail">{{key['feedback']}}</td></tr>
+                <tr></tr><td class = "fdID">{{key['user_ID']}}</td><td class = "fdDate">{{key['start_date']}} to {{key['start_date']}}</td></tr>
+              </tbody>
+            </table>            
+        {%endfor%}
+
     </div>
-    <div id = "roomShowArea_feedback">
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-      <label>a</label><br/>
-    </div>
+    <div id = "roomShowArea_feedback"></div>
     <div id = "editArea_feedback"></div>
 
   </body>

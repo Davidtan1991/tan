@@ -9,6 +9,6 @@ dataInstance = DataFunc()
 
 @feedBack_Page.route('/feedBack_Page')
 def feedBackPageFunc():
-    dataInstance.getFeedbackData()
+    initialFeedbacklist = dataInstance.getInitialFeedbackData()
 
-    return render_template("feedBackPage.html")
+    return render_template("feedBackPage.html", initialFeedback = initialFeedbacklist)

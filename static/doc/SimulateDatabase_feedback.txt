@@ -1,11 +1,11 @@
-user_name*start_date*end_date*photo*feedback
-user_1*01-01-1901*02-01-1901*photo_1*good experience!
-user_2*01-01-1902*02-01-1902*photo_2*That amazing!
-user_3*01-01-1903*02-01-1903*photo_3*good experience!
-user_4*01-01-1904*02-01-1904*photo_4*That amazing!
-user_5*01-01-1905*02-01-1905*photo_5*good experience!
-user_6*01-01-1906*02-01-1906*photo_6*That amazing!
-user_7*01-01-1907*02-01-1907*photo_7*good experience!
-user_8*01-01-1908*02-01-1908*photo_8*That amazing!
-user_9*01-01-1909*02-01-1909*photo_9*good experience!
-user_10*01-01-19010*02-01-19010*photo_10*That amazing!
+user_ID**start_date**end_date**photo**feedback
+user_1**01-01-1901**02-01-1901**None**good experience!
+user_2**01-01-1902**02-01-1902**None**That amazing!
+user_3**01-01-1903**02-01-1903**None**good experience!
+user_4**01-01-1904**02-01-1904**None**That amazing!
+user_5**01-01-1905**02-01-1905**None**good experience!
+user_6**01-01-1906**02-01-1906**None**That amazing!
+user_7**01-01-1907**02-01-1907**None**good experience!
+user_8**01-01-1908**02-01-1908**None**That amazing!
+user_9**01-01-1909**02-01-1909**None**good experience!
+user_10**01-01-19010**02-01-1901**None**That amazing!
