@@ -1,0 +1,5 @@
+orderID,userID,roomTypes,startDate,endDate,customerNumber,isFeedback
+0001,idid1,t1;t2,01-01-1900,02-01-1900,4,Y
+0002,idid2,t3,03-01-1900,05-01-1900,2,N
+0003,idid3,t4,04-01-1900,10-01-1900,1,N
+0004,idid4,t1;t4,03-01-1900,06-01-1900,3,Y

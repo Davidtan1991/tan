@@ -23,18 +23,41 @@
   <body>
     <div id = "titleArea_feedback">Feedback Area</div>
     <div id = "historyShowArea_feedback">
-        {%for key in initialFeedback%}
-            <table class = "fbUnit">
-              <tbody>
-                <tr><td class = "fdPhoto">{{key['photo']}}</td><td class = "fdDetail">{{key['feedback']}}</td></tr>
-                <tr></tr><td class = "fdID">{{key['user_ID']}}</td><td class = "fdDate">{{key['start_date']}} to {{key['start_date']}}</td></tr>
-              </tbody>
-            </table>            
-        {%endfor%}
+      {%for key in initialFeedback%}
+          <table class = "fbUnit">
+            <tbody>
+              <tr><td class = "fdPhoto">{{key['photo']}}</td><td class = "fdDetail">{{key['feedback']}}</td></tr>
+              <tr></tr><td class = "fdID">{{key['user_ID']}}</td><td class = "fdDate">{{key['start_date']}} to {{key['start_date']}}</td></tr>
+            </tbody>
+          </table>            
+      {%endfor%}
 
     </div>
     <div id = "roomShowArea_feedback"></div>
-    <div id = "editArea_feedback"></div>
+    <div id = "editArea_feedback">
+
+        {% block content %}
+          {% if allowFeedbackBool == 1 %}
+            <table id = "editAreaGroup">
+              <tbody>
+                <tr><td id = "editAreaGroup_photo"></td><td id = "editAreaGroup_detail"><input id = "editBox_feedback" placeholder = "Please type your feedback..."/></td></tr>
+                <tr></tr><td id = "editAreaGroup_id">{{allowFeedback[1]}}</td><td id = "editAreaGroup_order">{{allowFeedback[2]}} : {{allowFeedback[3]}} to {{allowFeedback[4]}}</td></tr>
+              </tbody>
+            </table>          
+          {% else %}
+            <table id = "editAreaGroup">
+              <tbody>
+                <tr><td id = "editAreaGroup_photo"></td><td id = "editAreaGroup_detail"><input id = "editBox_feedback" placeholder = "There is no order for feedback" disabled/></td></tr>
+                <tr></tr><td id = "editAreaGroup_id"></td><td id = "editAreaGroup_order"></td></tr>
+              </tbody>
+            </table>           
+          {% endif %}
+        {% endblock content %}
+        
+        
+
+
+    </div>
 
   </body>
 </html>

@@ -1,25 +1,33 @@
-
+import csv
+import copy
 
 class DataFunc:
     def __init__(self) -> None:
-        self.feedBackpath = "./static/doc/SimulateDatabase_feedback.txt" #"../tan/static/doc/SimulateDatabase_feedback.txt"
-        
+        self.feedBackPath = "./static/doc/SimulateDatabase_feedback.txt" #"../tan/static/doc/SimulateDatabase_feedback.txt"
+        self.userDataPath = "./static/doc/orderRecording.csv"
+
     def getInitialFeedbackData(self):
         originalFeedbackData = []
         initialFeedbackDataList = [] # length <= 10   
-        with open(self.feedBackpath, "r") as file_f:
+        with open(self.feedBackPath, "r") as file_f:
             originalFeedbackData = file_f.readlines()
             file_f.close()
         
         titleLine = originalFeedbackData.pop(0)
         titleLine = titleLine.rstrip("\n").split("**")
 
-
-        for item in originalFeedbackData:
+        initialNums = 0
+        if len(originalFeedbackData) > 10:
+            initialNums = 10
+        else:
+            initialNums = len(originalFeedbackData)
+        
+        for i in range(0, initialNums):
+            item = originalFeedbackData[i]
             temNew = item.split("**")
             temDict = {}
-            for i in range(0, len(temNew)):
-                temDict[titleLine[i]] = temNew[i]
+            for j in range(0, len(temNew)):
+                temDict[titleLine[j]] = temNew[j]
             initialFeedbackDataList.append(temDict)
     
         return initialFeedbackDataList
@@ -28,3 +36,29 @@ class DataFunc:
 
     def updateFeedbackData(self):
         pass
+
+
+    def getUserData(self):
+        userDataDict = {}
+        userDataList = []
+        userDataFile = open(self.userDataPath, "r")
+        userData = csv.reader(userDataFile)
+        for row in userData:
+            userDataList.append(row)
+        
+        userDataList.pop(0)
+
+        for o1 in userDataList:
+            userDataDict[o1[1]] = []
+        
+        for o2 in userDataList:
+            roomList = copy.deepcopy(o2[2]).split(";")
+            orderNew = copy.deepcopy(o2)
+            orderNew[2] = roomList
+            userDataDict[o2[1]].append(orderNew)
+        # { userID: [
+        #            [orderID, userID, roomTypeList, startDate, endDate, customerNumbers, hasAlreadyFeedback(Y/N)], 
+        #            [.....]......
+        #           ]
+        # }
+        return userDataDict

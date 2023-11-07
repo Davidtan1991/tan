@@ -132,3 +132,49 @@ body {
     background-color: green;
     top: calc(70%);
 }
+
+#editAreaGroup{
+    margin-left: 5%;
+    margin-top: 1.5%;
+    height: 60%;
+    width: 90%;
+    border: 1px solid black;
+}
+
+#editAreaGroup_photo{
+    background-color: rgb(38, 188, 226);
+    width: 10%;
+    height: 80%;
+    margin: 0.5%;
+    text-align: center;
+}
+
+#editAreaGroup_id{
+    background-color: rgb(105, 111, 112);
+    width: 10%;
+    height: 20%;
+    margin: 0.5%;
+    text-align: center;
+}
+
+
+#editAreaGroup_detail{
+    background-color: rgb(10, 74, 90);
+    width: 90%;
+    height: 80%;
+    margin: 0.5%;
+}
+
+#editBox_feedback{
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+}
+
+
+#editAreaGroup_order{
+    background-color: rgb(8, 11, 12);
+    width: 90%;
+    height: 20%;
+    margin: 0.5%;
+}
