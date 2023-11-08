@@ -14,10 +14,9 @@
       integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
       crossorigin="anonymous"
     />
-    <link
-      rel="stylesheet"
-      href="{{url_for('static', filename = './css/feedBack.css')}}"
-    />
+    <link rel="stylesheet" href="{{url_for('static', filename = './css/feedBack.css')}}"/>
+
+    <script src="../static/js/jquery-3.7.1.min.js"></script>
   </head>
 
   <body>
@@ -54,10 +53,38 @@
           {% endif %}
         {% endblock content %}
         
-        
-
-
     </div>
+
+
+
+    <script type = "text/javascript">
+      var urlPath = "http://127.0.0.1:5000";
+      //JS method>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+      // const historyShowArea_feedback = document.getElementById('historyShowArea_feedback');
+
+      // historyShowArea_feedback.addEventListener('scroll', (e) => {
+      //   const scrollableHeight = historyShowArea_feedback.scrollHeight - historyShowArea_feedback.clientHeight;
+      //   if(historyShowArea_feedback.scrollTop >= scrollableHeight-2){  // -2 is for moving the error casued by CSS
+      //     let currentChildrenNum = historyShowArea_feedback.children.length;
+          
+      //   }
+      // })
+      //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+      //jQuery method>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+      const historyShowArea_feedback = $("#historyShowArea_feedback");
+      historyShowArea_feedback.scroll(function() {
+        // console.log(historyShowArea_feedback.height(), historyShowArea_feedback.scrollTop(), historyShowArea_feedback[0].scrollHeight);
+        if(historyShowArea_feedback.height() + historyShowArea_feedback.scrollTop() >= historyShowArea_feedback[0].scrollHeight-2){
+          let currentCount_fb = historyShowArea_feedback.find("table").length  //find the number of the specific tag
+          // let currentCount_fb = $("#historyShowArea_feedback table").length  //find the number of the specific tag
+          console.log(currentCount_fb);
+        }
+      })
+      //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+    </script>
 
   </body>
 </html>
