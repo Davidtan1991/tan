@@ -1,4 +1,4 @@
-from flask import Blueprint
+from flask import Blueprint, json, request
 from flask.templating import render_template
 from func.data_Func import DataFunc
 import copy
@@ -22,5 +22,17 @@ def feedBackPageFunc():
                 allowFeedBack = 1
                 break   # only show one no-feedback order for each time
     
-
     return render_template("feedBackPage.html", initialFeedback = initialFeedbackList, allowFeedback = allowFeedbackList, allowFeedbackBool = allowFeedBack)
+
+
+@feedBack_Page.route('/readMoreFeedback', methods = ['GET','POST'])
+def moreFeedback():
+    if request.method == "POST":
+        currentFeedback_ajax = request.get_json()
+        feedbackNum = currentFeedback_ajax['feedbackNum']
+        moreFbData = dataInstance.updateFeedbackData(int(feedbackNum))
+        
+        moreFbDict = {}
+        moreFbDict["detail"] = moreFbData
+
+        return json.dumps(moreFbDict)

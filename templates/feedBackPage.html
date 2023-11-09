@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="{{url_for('static', filename = './css/feedBack.css')}}"/>
 
     <script src="../static/js/jquery-3.7.1.min.js"></script>
+    <script src="../static/js/myLib.js"></script>
+
   </head>
 
   <body>
@@ -78,7 +80,8 @@
         if(historyShowArea_feedback.height() + historyShowArea_feedback.scrollTop() >= historyShowArea_feedback[0].scrollHeight-2){
           let currentCount_fb = historyShowArea_feedback.find("table").length  //find the number of the specific tag
           // let currentCount_fb = $("#historyShowArea_feedback table").length  //find the number of the specific tag
-          console.log(currentCount_fb);
+          console.log("qqqqqqqqqq",currentCount_fb)
+          $.readmMoreFeedback(urlPath, currentCount_fb);          
         }
       })
       //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<

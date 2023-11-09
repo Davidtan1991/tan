@@ -34,8 +34,31 @@ class DataFunc:
 
 
 
-    def updateFeedbackData(self):
-        pass
+    def updateFeedbackData(self, currentNum):
+        updateFeedbackData = []
+        updateFeedbackDataList = [] # length <= 10   
+        with open(self.feedBackPath, "r") as file_f:
+            updateFeedbackData = file_f.readlines()
+            file_f.close()
+        
+        titleLine = updateFeedbackData.pop(0)
+        titleLine = titleLine.rstrip("\n").split("**")
+
+        updateNums = currentNum
+        if len(updateFeedbackData) > currentNum+5:
+            updateNums = currentNum+5
+        else:
+            updateNums = len(updateFeedbackData)
+        
+        for i in range(0, updateNums):
+            item = updateFeedbackData[i]
+            temNew = item.split("**")
+            temDict = {}
+            for j in range(0, len(temNew)):
+                temDict[titleLine[j]] = temNew[j]
+            updateFeedbackDataList.append(temDict)
+    
+        return updateFeedbackDataList
 
 
     def getUserData(self):
