@@ -50,7 +50,7 @@ class DataFunc:
         else:
             updateNums = len(updateFeedbackData)
         
-        for i in range(0, updateNums):
+        for i in range(currentNum, updateNums):
             item = updateFeedbackData[i]
             temNew = item.split("**")
             temDict = {}

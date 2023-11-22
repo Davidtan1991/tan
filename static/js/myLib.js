@@ -18,50 +18,19 @@
                 dataType:'json',
                 contentType: 'application/json; charset=UTF-8',
                 success: function(data){
-                    let result = data["detail"]
-                    // console.log("return: ", result, );
-                    
-
-                    //?empty then add all once time? --------- ?or get the new feedback then just add new items at the end of the historydisplay area?
-
+                    let result = data["detail"]           
                     let newHistoryData = ""
                     $.each(result, function(index, element){
-                        console.log("index: ", index);
-                        console.log("element: ", element);
-                        console.log("type: ", typeof(element));
-                        console.log("-----------------end----------------");
-                    // {%for key in initialFeedback%}
-                    // <table class = "fbUnit">
-                    //   <tbody>
-                    //     <tr><td class = "fdPhoto">{{key['photo']}}</td><td class = "fdDetail">{{key['feedback']}}</td></tr>
-                    //     <tr></tr><td class = "fdID">{{key['user_ID']}}</td><td class = "fdDate">{{key['start_date']}} to {{key['start_date']}}</td></tr>
-                    //   </tbody>
-                    // </table>            
-                    // {%endfor%}
 
-
+                        newHistoryData += '<table class = "fbUnit">' + 
+                                         '<tbody>' + 
+                                         '<tr><td class = "fdPhoto">' + element['photo'] +  '</td><td class = "fdDetail">' + element['feedback'] + '</td></tr>' +
+                                         '<tr></tr><td class = "fdID">' + element['user_ID'] + '</td><td class = "fdDate">' + element['start_date'] + ' to ' + element['end_date'] + '</td></tr>' +
+                                         '</tbody>' + 
+                                         '</table>'                   
                     });
-
-                    // append/appendTo  $('#historyShowArea_feedback')
-
-
-
-
-
-
-
-
-
-
-
-                    // $('#historyShowArea_feedback').empty();
-                    console.log("last Count:", currentFeedbackNum)
-                    
-
-
-
-
-
+                    let ele = $(newHistoryData);
+                    $('#historyShowArea_feedback').append(ele);
                 },
                 error: function(){
                     alert('There is not more feedback!')
